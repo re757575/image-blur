@@ -102,3 +102,8 @@ const blurImage = async (file, blurredBucketName) => {
     return unlink(tempLocalPath);
 };
 // [END functions_imagemagick_blur]
+
+
+exports.helloWorld = (req, res) => {
+    res.send('Hello, World');
+};

@@ -48,3 +48,8 @@ docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud functio
 ```
 docker run --rm -ti --volumes-from gcloud-config -v /${PWD}:/home google/cloud-sdk /bin/bash -c "cd /home && export GOOGLE_APPLICATION_CREDENTIALS="/home/google_application_credentials/cloud-functions-bdbfa45d1e93.json" && apt-get install nodejs -y && node index.js"
 ```
+
+local test
+```
+docker run --rm -ti --volumes-from gcloud-config -v /${PWD}:/home google/cloud-sdk /bin/bash -c "cd /home && export GOOGLE_APPLICATION_CREDENTIALS="/home/google_application_credentials/cloud-functions-bdbfa45d1e93.json" && apt-get install nodejs npm -y && npm test"
+```
